@@ -21,6 +21,8 @@ public class C02_Xpath {
 //9. Pay buttonuna tiklayin
 //10. “The payment was successfully submitted.” mesajinin ciktigini control edin
 
+
+
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();

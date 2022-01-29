@@ -1,4 +1,4 @@
-package tests.day10;
+package tests.practice;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -12,10 +12,9 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class C01 {
-
+public class GrupCalismasi {
     WebDriver driver;
-
+    WebElement resultTextActual;
     @BeforeClass
     public void setup() {
         WebDriverManager.chromedriver().setup();
@@ -23,6 +22,8 @@ public class C01 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+        resultTextActual = driver.findElement(By.xpath("//p[@id='result']"));
+
     }
 
 
@@ -31,8 +32,8 @@ public class C01 {
 
         driver.findElement(By.xpath("//button[normalize-space()='Click for JS Alert']")).click();
         driver.switchTo().alert().accept();
-        WebElement resultTextActual = driver.findElement(By.xpath("//p[@id='result']"));
         String actualText = resultTextActual.getText();
+        System.out.println("actualText = " + actualText);
         String expectedText = "You successfully clicked an alert";
         Assert.assertEquals(actualText, expectedText);
 
@@ -44,8 +45,8 @@ public class C01 {
 
         driver.findElement(By.xpath("//button[normalize-space()='Click for JS Confirm']")).click();
         driver.switchTo().alert().dismiss();
-        WebElement resultTextActual = driver.findElement(By.xpath("//p[@id='result']"));
         String actualText = resultTextActual.getText();
+        System.out.println("actualText = " + actualText);
         String expectedtext = "successfuly";
         Assert.assertFalse(actualText.contains(expectedtext));
 
@@ -59,8 +60,8 @@ public class C01 {
         String gonderilenIsim = "hasan";
         driver.switchTo().alert().sendKeys(gonderilenIsim);
         driver.switchTo().alert().accept();
-        WebElement actualText = driver.findElement(By.xpath("//p[@id='result']"));
-        String actualTextName = actualText.getText();
+        String actualTextName = resultTextActual.getText();
+        System.out.println("actualTextName = " + actualTextName);
         String expectedName = "hasan";
         Assert.assertTrue(actualTextName.contains(expectedName));
 

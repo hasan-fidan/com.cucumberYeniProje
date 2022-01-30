@@ -67,7 +67,7 @@ public class C01_WindowHandle {
         for (String each: handleDegerleriSet
              ) {
 
-            if (!(each.equals(windowHandleDegeri1) || each.equals(windowHandleDegeri2)) ){
+            if (!(each.equals(windowHandleDegeri1) && each.equals(windowHandleDegeri2)) ){
 
                 windowHandleDegeri3=each;
             }

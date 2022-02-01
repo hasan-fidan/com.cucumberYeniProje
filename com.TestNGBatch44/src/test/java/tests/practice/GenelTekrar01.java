@@ -77,9 +77,9 @@ public class GenelTekrar01 extends TestBase {
 
         driver.switchTo().newWindow(WindowType.TAB);
         driver.get("https://www.amazon.com/");
-        WebElement dropDownElementi = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
-        Select select = new Select(dropDownElementi);
-        WebElement seaarchBox = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+         dropDownElementi = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
+         select = new Select(dropDownElementi);
+         seaarchBox = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
 
         select.selectByVisibleText("Baby");
 

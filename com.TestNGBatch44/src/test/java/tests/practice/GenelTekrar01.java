@@ -32,7 +32,7 @@ public class GenelTekrar01 extends TestBase {
         driver.get("https://www.amazon.com/");
         seaarchBox = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
         dropDownElementi = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
-        select = new Select(driver.findElement(By.xpath("//select[@id='searchDropdownBox']")));
+        select = new Select(dropDownElementi);
     }
 
     @Test

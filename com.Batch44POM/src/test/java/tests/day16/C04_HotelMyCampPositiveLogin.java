@@ -19,7 +19,7 @@ public class C04_HotelMyCampPositiveLogin {
         hotelMyCampPage.usernameBox.sendKeys("manager");
 
         //	test data password : Manager1!
-        hotelMyCampPage.passwordBos.sendKeys("Manager1!");
+        hotelMyCampPage.passwordBox.sendKeys("Manager1!");
         hotelMyCampPage.loginButonu.click();
 
         //	Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et

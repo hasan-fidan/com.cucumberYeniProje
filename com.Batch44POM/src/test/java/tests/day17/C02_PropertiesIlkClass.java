@@ -6,6 +6,8 @@ import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.util.zip.CRC32;
+
 public class C02_PropertiesIlkClass {
 
     @Test
@@ -30,6 +32,10 @@ public class C02_PropertiesIlkClass {
         Assert.assertTrue(hotelMyCampPage.basariliGirisYaziElementi.isDisplayed());
 
         Driver.closeDriver();
+
+
+
+
 
     }
 

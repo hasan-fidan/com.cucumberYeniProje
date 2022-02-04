@@ -12,7 +12,7 @@ public class C02_PropertiesIlkClass {
     public void positiveLoginTesti(){
         // Hotel My Camp sitesine positive login testini POM'a tam uygun olarak yapiniz
 
-        //https://www. hotelmycamp.com/ adresine git
+        //https://www.hotelmycamp.com/ adresine git
         // Driver.getDriver().get("buraya properties dosyasina git HMCUrl'e karsilik gelen degeri getir");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         //		login butonuna bas
@@ -30,6 +30,7 @@ public class C02_PropertiesIlkClass {
         Assert.assertTrue(hotelMyCampPage.basariliGirisYaziElementi.isDisplayed());
 
         Driver.closeDriver();
+
     }
 
 }

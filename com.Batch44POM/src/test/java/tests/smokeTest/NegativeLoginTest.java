@@ -23,8 +23,8 @@ public class NegativeLoginTest {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.ilkLoginLinki.click();
-        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
-        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCWrongPassword"));
+        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
+        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("WrongPassword"));
         hotelMyCampPage.loginButonu.click();
         Assert.assertTrue(hotelMyCampPage.girisYapilamadiYaziElementi.isDisplayed());
         Driver.closeDriver();
@@ -35,8 +35,8 @@ public class NegativeLoginTest {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.ilkLoginLinki.click();
-        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("HMCWrongUsername"));
-        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
+        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("WrongUserName"));
+        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
         hotelMyCampPage.loginButonu.click();
         Assert.assertTrue(hotelMyCampPage.girisYapilamadiYaziElementi.isDisplayed());
         Driver.closeDriver();
@@ -46,8 +46,8 @@ public class NegativeLoginTest {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.ilkLoginLinki.click();
-        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("HMCWrongUsername"));
-        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCWrongPassword"));
+        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("WrongUserName"));
+        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("WrongPassword"));
         hotelMyCampPage.loginButonu.click();
         Assert.assertTrue(hotelMyCampPage.girisYapilamadiYaziElementi.isDisplayed());
         Driver.closeDriver();

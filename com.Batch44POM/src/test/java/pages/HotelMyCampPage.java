@@ -61,8 +61,8 @@ public class HotelMyCampPage {
     public void girisYap(){
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         ilkLoginLinki.click();
-        usernameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
-        passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
+        usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
+        passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
         loginButonu.click();
     }
 

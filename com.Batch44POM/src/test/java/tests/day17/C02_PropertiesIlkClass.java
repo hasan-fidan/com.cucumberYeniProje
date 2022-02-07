@@ -6,8 +6,6 @@ import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-import java.util.zip.CRC32;
-
 public class C02_PropertiesIlkClass {
 
     @Test
@@ -22,9 +20,9 @@ public class C02_PropertiesIlkClass {
         hotelMyCampPage.ilkLoginLinki.click();
 
         //	test data username: manager ,
-        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
+        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
         //	test data password : Manager1!
-        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
+        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
         hotelMyCampPage.bekle(3);
         hotelMyCampPage.loginButonu.click();
         //	Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et

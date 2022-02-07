@@ -3,15 +3,11 @@ package practice;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Driver;
 
-import java.text.DecimalFormat;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,19 +57,19 @@ public class Q12 {
                 WebElement randomSepetButonuElementi = Driver.getDriver().findElement(By.xpath(sepeteEkleButonuXpath));
                 randomSepetButonuElementi.click();
                 sepetiKapatElementi = Driver.getDriver().findElement(By.xpath("//div[@class='float-cart__close-btn']"));
-                Thread.sleep(500);
+                Thread.sleep(250);
                 sepetiKapatElementi.click();
-                Thread.sleep(500);
+                Thread.sleep(250);
             }
 
         }while (randomSayi.size()!=5); // buradaki sayi degistirilerek sepete eklenecek urun sayisi degistirilebilir.
 
 // ve sectiginiz öğelerin adlarını yazdırın
 
-                Thread.sleep(500);
+        Thread.sleep(250);
                 WebElement sepetiAc = Driver.getDriver().findElement(By.xpath("//span[@class='bag bag--float-cart-closed']"));
                 sepetiAc.click();
-        Thread.sleep(500);
+        Thread.sleep(250);
                 List<WebElement> sepettekiUrunlerElementi = Driver.getDriver().findElements(By.xpath("//p[@class='title']"));
                 System.out.println("~~~~~Sepetteki Urunler~~~~~");
                 sepettekiUrunlerElementi.stream().forEach(t -> System.out.println(t.getText()));

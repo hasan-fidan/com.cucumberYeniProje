@@ -11,12 +11,13 @@ import utilities.Driver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Q12 {
+public class Q012 {
 
 
 
-    @Test (invocationCount = 3) // testin kac defa tekrarlanacagi ayarlanabilir.
+    @Test (invocationCount = 30) // testin kac defa tekrarlanacagi ayarlanabilir.
     public void test01() throws InterruptedException {
+
 // 1."https://react-shopping-cart-67954.firebaseapp.com/" adresine gidin
 
                 Driver.getDriver().get("https://react-shopping-cart-67954.firebaseapp.com/");
@@ -66,10 +67,10 @@ public class Q12 {
 
 // ve sectiginiz öğelerin adlarını yazdırın
 
-        Thread.sleep(250);
+                Thread.sleep(250);
                 WebElement sepetiAc = Driver.getDriver().findElement(By.xpath("//span[@class='bag bag--float-cart-closed']"));
                 sepetiAc.click();
-        Thread.sleep(250);
+                Thread.sleep(250);
                 List<WebElement> sepettekiUrunlerElementi = Driver.getDriver().findElements(By.xpath("//p[@class='title']"));
                 System.out.println("~~~~~Sepetteki Urunler~~~~~");
                 sepettekiUrunlerElementi.stream().forEach(t -> System.out.println(t.getText()));

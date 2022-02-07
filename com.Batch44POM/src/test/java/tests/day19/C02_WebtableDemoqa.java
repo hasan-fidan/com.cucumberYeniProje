@@ -1,6 +1,5 @@
 package tests.day19;
 
-import org.openqa.selenium.devtools.v85.network.model.DataReceived;
 import org.testng.annotations.Test;
 import pages.DemoqaPage;
 import utilities.ConfigReader;
@@ -14,7 +13,7 @@ public class C02_WebtableDemoqa {
     @Test
     public void demoqaTest(){
         //  1. “https://demoqa.com/webtables” sayfasina gidin
-        Driver.getDriver().get(ConfigReader.getProperty("DemoqaUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("DemoQaWebTableUrl"));
 
         DemoqaPage demoqaPage=new DemoqaPage();
         //  2. Headers da bulunan department isimlerini yazdirin

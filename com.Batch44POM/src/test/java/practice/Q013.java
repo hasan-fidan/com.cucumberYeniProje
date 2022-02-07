@@ -5,7 +5,7 @@ import pages.HotelMyCampAdminGiris;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class Q13 {
+public class Q013 {
 
     //● Bir class oluşturun : D18_WebTables
     //● login( ) metodun oluşturun ve oturum açın.

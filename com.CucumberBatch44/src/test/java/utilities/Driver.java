@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class Driver {
 
-    private  Driver(){
+    private Driver(){
 
     }
 

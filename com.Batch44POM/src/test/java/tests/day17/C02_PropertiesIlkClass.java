@@ -12,7 +12,7 @@ public class C02_PropertiesIlkClass {
     public void positiveLoginTesti(){
         // Hotel My Camp sitesine positive login testini POM'a tam uygun olarak yapiniz
 
-        //https://www.hotelmycamp.com/ adresine git
+        //https://www. hotelmycamp.com/ adresine git
         // Driver.getDriver().get("buraya properties dosyasina git HMCUrl'e karsilik gelen degeri getir");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         //		login butonuna bas
@@ -20,9 +20,9 @@ public class C02_PropertiesIlkClass {
         hotelMyCampPage.ilkLoginLinki.click();
 
         //	test data username: manager ,
-        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
+        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
         //	test data password : Manager1!
-        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
+        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
         hotelMyCampPage.bekle(3);
         hotelMyCampPage.loginButonu.click();
         //	Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
@@ -30,11 +30,6 @@ public class C02_PropertiesIlkClass {
         Assert.assertTrue(hotelMyCampPage.basariliGirisYaziElementi.isDisplayed());
 
         Driver.closeDriver();
-
-
-
-
-
     }
 
 }

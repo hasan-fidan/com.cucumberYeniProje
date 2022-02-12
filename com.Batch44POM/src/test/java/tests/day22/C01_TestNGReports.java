@@ -21,7 +21,7 @@ public class C01_TestNGReports extends TestBaseRapor {
 
         ReusableMethods.switchToWindow("New Window");
         extentTest.info("resusable method kullanarak acilan ikinci sayfaya gecildi");
-        String expectedTitle="New Window";
+        String expectedTitle="New Window1";
         String actualTitle=Driver.getDriver().getTitle();
 
         Assert.assertEquals(actualTitle,expectedTitle);

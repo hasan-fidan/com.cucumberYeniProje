@@ -9,7 +9,6 @@ import utilities.Driver;
 import java.util.List;
 
 public class DemoqaPage {
-
     public DemoqaPage(){
 
         PageFactory.initElements(Driver.getDriver(),this);
@@ -30,66 +29,19 @@ public class DemoqaPage {
     @FindBy(xpath = "//div[@class='rt-tr-group']")
     public List<WebElement> tumSatirlarWebelementList;
 
-    @FindBy(xpath = "//div[3]//div[1]//div[1]")
-    public WebElement alertFramesWindowsPage;
-
-    @FindBy(xpath = "//div[5]//div[1]//div[1]")
-    public WebElement interactionsWindowsPage;
-
-    @FindBy(xpath = "//span[text()='Alerts']")
-    public WebElement alertPage;
-
-    @FindBy(xpath = "//button[@id='alertButton']")
-    public WebElement alertButonu;
-
-    @FindBy(xpath = "//button[@id='timerAlertButton']")
-    public WebElement timeAlertButonu;
-
-    @FindBy(xpath = "//button[@id='confirmButton']")
-    public WebElement jscriptAlertButonu;
-
-    @FindBy(xpath = "//button[@id='promtButton']")
-    public WebElement jscriptEnterNameAlertButonu;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public void sutunYazdir(int sutun) {
-
         // ((//div[@class='rt-tr-group'])[3]//div[@class='rt-td'])[4]
 
-        int satirSayisi = tumSatirlarWebelementList.size();
+        int satirSayisi=tumSatirlarWebelementList.size();
         String dinamikXpath;
         WebElement geciciElement;
-        System.out.println(basliklarWebelementiListesi.get(sutun - 1).getText());
+        System.out.println(basliklarWebelementiListesi.get(sutun-1).getText());
 
-        for (int i = 1; i <= satirSayisi; i++) {
+        for (int i=1 ; i<=satirSayisi ;i++){
 
-            dinamikXpath = "((//div[@class='rt-tr-group'])[" + i + "]//div[@class='rt-td'])[" + sutun + "]";
-            geciciElement = Driver.getDriver().findElement(By.xpath(dinamikXpath));
+            dinamikXpath="((//div[@class='rt-tr-group'])["+i+"]//div[@class='rt-td'])["+sutun+"]";
+            geciciElement=Driver.getDriver().findElement(By.xpath(dinamikXpath));
             System.out.println(geciciElement.getText());
         }
     }

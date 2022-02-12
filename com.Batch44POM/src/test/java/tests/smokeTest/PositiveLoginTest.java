@@ -24,9 +24,9 @@ public class PositiveLoginTest {
        HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
        hotelMyCampPage.ilkLoginLinki.click();
        //test data username: manager ,
-       hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
+       hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
        //test data password : Manager1!
-       hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
+       hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
        hotelMyCampPage.loginButonu.click();
        //Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
        Assert.assertTrue(hotelMyCampPage.basariliGirisYaziElementi.isDisplayed());

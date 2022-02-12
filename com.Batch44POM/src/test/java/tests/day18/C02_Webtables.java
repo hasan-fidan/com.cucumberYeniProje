@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pages.HMCWebTablePage;
 import pages.HotelMyCampPage;
+import utilities.Driver;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class C02_Webtables {
 
     }
 
-    @Test
+    @Test (dependsOnMethods = "loginT")
     public void table(){
         //● table( ) metodu oluşturun
         //			○ Tüm table body’sinin boyutunu(sutun sayisi) bulun. /tbody
@@ -51,18 +52,30 @@ public class C02_Webtables {
         List<WebElement> bodyTumDataList=hmcWebTablePage.tumBodyDatalariList;
 
         System.out.println("body'deki data sayisi : " + bodyTumDataList.size());
-        
+
 
 
 
     }
 
 
-    @Test
+    @Test (dependsOnMethods = "loginT")
     public void printRows(){
         //● printRows( ) metodu oluşturun //tr
         //			○ table body’sinde bulunan toplam satir(row) sayısını bulun.
+        // //tbody//tr
+        hmcWebTablePage=new HMCWebTablePage();
+        System.out.println(hmcWebTablePage.satirlarListesi.size());
+
         //			○ Table body’sinde bulunan satirlari(rows) konsolda yazdırın.
+
+        List <WebElement> satirlarWebelementListesi=hmcWebTablePage.satirlarListesi;
+        for (WebElement each: satirlarWebelementListesi
+             ) {
+            System.out.println(each.getText());
+        }
         //			○ 4.satirdaki(row) elementleri konsolda yazdırın.
+        System.out.println("4.satir : "+satirlarWebelementListesi.get(3).getText());
+
     }
 }

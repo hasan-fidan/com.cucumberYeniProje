@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class ReusableMethods {
+public class ReusableMethodsExcel {
     // bir method olusturalim
     // dosya yolu,sayfa ismi ve satir, hucre indexini verince hucre bilgisini dondursun
 

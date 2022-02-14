@@ -43,4 +43,15 @@ public class HotelMyCampStepDefinitions {
         Assert.assertTrue(hmcPage.girisYapilamadiYaziElementi.isDisplayed());
 
     }
+
+
+    @Then("scenario outline'dan kullanici adi olarak {string} yazar")
+    public void scenarioOutlineDanKullaniciAdiOlarakYazar(String username) {
+        hmcPage.usernameTextBox.sendKeys(username);
+    }
+
+    @And("scenario outline'dan password olarak {string} yazar")
+    public void scenarioOutlineDanPasswordOlarakYazar(String password) {
+        hmcPage.passwordTextBox.sendKeys(password);
+    }
 }

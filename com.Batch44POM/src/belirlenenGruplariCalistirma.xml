@@ -14,6 +14,7 @@
         <groups>
             <run>
                 <include name="miniRegression"></include>
+                <exclude name="smoke"></exclude>
             </run>
         </groups>
         <packages>

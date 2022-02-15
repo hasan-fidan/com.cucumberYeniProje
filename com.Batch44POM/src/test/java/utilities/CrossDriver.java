@@ -11,16 +11,24 @@ import java.time.Duration;
 
 public class CrossDriver {
     private  CrossDriver(){
+
     }
+
     public static WebDriver driver;
+
     public static WebDriver getDriver(String browser){
         // buraya parametre olarak yazdigimiz browser sayesinde
         // coklu testler ,calistirilirken arada CrossDriver'a yeni
         // browser atamasi yapabilmemize imkan tanimasi icindir
+
         browser = browser == null ? ConfigReader.getProperty("browser") : browser;
+
+
+
         if(driver==null){   // bu if sayesinde kod calisirken bir kere new keyword ile driver olusturulaca
             // diger kullanimlarda new devreye girmeyecek
             switch (browser){
+
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver=new ChromeDriver();
@@ -41,15 +49,19 @@ public class CrossDriver {
                     WebDriverManager.chromedriver().setup();
                     driver=new ChromeDriver();
             }
+
         }
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         return driver;
     }
+
     public static void closeDriver(){
         if (driver!=null){
             driver.quit();
             driver=null;
         }
+
     }
 }

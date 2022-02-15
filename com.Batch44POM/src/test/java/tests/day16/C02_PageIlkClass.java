@@ -26,11 +26,7 @@ public class C02_PageIlkClass {
         Assert.assertTrue(actualSonucStr.contains("Nutella"));
 
         Driver.closeDriver();
-//merhaba pull denemesi
-        //8888888888888
-        //555555555
 
-        ////123123
     }
 
     @Test(groups = {"miniRegression","smoke"})

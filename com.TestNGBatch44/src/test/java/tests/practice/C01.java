@@ -25,7 +25,6 @@ public class C01 {
 // //● Bir önceki pencereye geri döndükten sonra sayfa başlığının “The Internet” olduğunu doğrulayın.
 
     WebDriver driver;
-
     @BeforeClass
     public void setup() {
         WebDriverManager.chromedriver().setup();

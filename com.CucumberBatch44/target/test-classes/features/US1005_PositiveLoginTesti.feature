@@ -1,4 +1,4 @@
-
+@parametreliTest
 Feature: US1005 Positive login testi
 
   @hotel

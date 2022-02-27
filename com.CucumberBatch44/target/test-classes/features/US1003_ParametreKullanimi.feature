@@ -1,4 +1,4 @@
-
+@parametreliTest
 Feature: US1003 parametre ile stepdefinition olusturma
 
   @paralel1

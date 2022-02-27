@@ -1,3 +1,4 @@
+@parametreliTest
 Feature: US1006 Negative Login Testi
 
   Scenario: TC09 yanlis username, dogru sifre ile giris yapilamaz
